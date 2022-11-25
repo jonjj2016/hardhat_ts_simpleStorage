@@ -18,7 +18,7 @@
     "console": "npx hardhat console --network localhost",
     "cons": "npx hardhat console --network goerli",
     "test": "npx hardhat test",
-    "prettier-format": "prettier --config .prettierrc './*.ts' --write"
+    "prettier-format": "prettier --config .prettierrc 'test/*.ts' 'scripts/*.ts' './*.ts' --write"
   },
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.1.2",
