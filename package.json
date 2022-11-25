@@ -1,0 +1,31 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.2"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "prettier-plugin-solidity"
+  ],
+  "scripts": {
+    "prettier-format": "prettier --config .prettierrc 'test/*.ts' 'scripts/*.ts' --write",
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "deploy_goerli": "npx hardhat run scripts/deploy.ts --network goerli",
+    "localhost": "npx hardhat run scripts/deploy.ts --network localhost",
+    "local_node": "npx hardhat node",
+    "console": "npx hardhat console --network localhost",
+    "cons": "npx hardhat console --network goerli",
+    "test": "npx hardhat test",
+    "prettier-format": "prettier --config .prettierrc './*.ts' --write"
+  },
+  "dependencies": {
+    "@nomiclabs/hardhat-etherscan": "^3.1.2",
+    "dotenv": "^16.0.3",
+    "hardhat-gas-reporter": "^1.0.9",
+    "prettier": "^2.8.0",
+    "prettier-plugin-solidity": "^1.0.0",
+    "solidity-coverage": "^0.8.2"
+  }
+}
