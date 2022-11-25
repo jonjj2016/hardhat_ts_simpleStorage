@@ -1,8 +1,10 @@
+import { SimpleStorage__factory } from './../typechain-types/factories/SimpleStorage__factory'
 import { assert } from 'chai'
 import { ethers } from 'hardhat'
+import { SimpleStorage } from '../typechain-types/SimpleStorage'
 
 describe('SimpleStorage', () => {
-  let simpleStorage: any, SimpleStorageFactory: any
+  let simpleStorage: SimpleStorage, SimpleStorageFactory: SimpleStorage__factory
   beforeEach(async () => {
     SimpleStorageFactory = await ethers.getContractFactory('SimpleStorage')
     simpleStorage = await SimpleStorageFactory.deploy()
